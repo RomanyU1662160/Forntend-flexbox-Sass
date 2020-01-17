@@ -1,0 +1,43 @@
+body{
+    margin : 0;
+    font-size: 20px; 
+}
+.main-wrapper{
+
+}
+
+.content{
+    padding:20px ; 
+line-height: 1.0 rem; 
+   
+}
+
+.overlay{
+border: solid 1px blue ;
+/* padding: 25px; */
+position: fixed;
+width: 100%;  
+height: 100%;
+top:0 ; left: 0; 
+display: flex; 
+align-items: center;
+justify-content: center; 
+overflow-y:scroll ; 
+}
+
+.overlay-error {
+    
+    color : blue; 
+    opacity:0.8; 
+    background-color: rgba(95, 60, 60, 0.356) 
+}
+
+.overlay-content{
+    width:80%; 
+    text-align: center; 
+    border: solid 1px rgb(10, 10, 9); 
+    background-color:red;
+    color:white;
+    opacity: 1;
+    
+}

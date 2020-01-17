@@ -1,0 +1,35 @@
+body{
+    margin:0; 
+}
+
+@media(min-width: 320px){
+    .nav-list{
+     flex-flow: column wrap   ; 
+}
+
+
+}
+
+
+.nav-list{
+    list-style-type: none; 
+    padding:0; 
+    margin:0; 
+   
+    display:flex;  
+     flex-flow: row wrap; 
+     /* flex-direction: column;  */
+}
+
+.nav-list_item{
+    flex: auto; 
+    padding:5px; 
+    border: 1px solid blue; 
+    color:red; 
+    
+}
+.nav-list_item:last-child{
+    margin:0; 
+}
+
+

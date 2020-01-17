@@ -1,0 +1,17 @@
+.main-container {}
+
+.gallery {
+    display: flex;
+    flex-flow:  row wrap; 
+}
+
+.gallery__item {
+   margin:5px; 
+    width:150px;
+   flex:auto; 
+}
+
+.gallery__item img {
+width:100%;
+border: solid 1px red; 
+}
