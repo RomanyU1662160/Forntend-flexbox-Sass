@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Tabs and Accordion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tabs">
+        <input type="radio" name="tab" id="one" class="tabs__input">
+        <label for="one" class="tabs__label">Flight Data  </label>
+        <div class="tab_content" id="flight">
+            <h3> Tab One Flight Data </h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod provident tempore. Pariatur hic fugiat veritatis, deserunt nihil saepe excepturi debitis commodi ab porro! Nostrum adipisci animi beatae quos dolorem possimus inventore ab incidunt
+            magni provident harum vel tempore facere similique accusamus, placeat velit nulla suscipit laudantium maiores sapiente assumenda. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque vitae, beatae ducimus quas modi autem porro!
+            Atque animi assumenda in quos, distinctio nihil, iste officiis error at illo, facere nisi!
+        </div>
+        <!-- tab2 -->
+
+        <input type="radio" name="tab" id="two" class="tabs__input">
+        <label for="two" class="tabs__label"> Details </label>
+        <div class="tab_content" id="info">
+            <h3> Tab Two More info </h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod provident tempore. Pariatur hic fugiat veritatis, deserunt nihil saepe excepturi debitis commodi ab porro! Nostrum adipisci animi beatae quos dolorem possimus inventore ab incidunt
+            magni provident harum vel tempore facere similique accusamus, placeat velit nulla suscipit laudantium maiores sapiente assumenda. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, et assumenda. Illum harum sequi animi, adipisci
+            incidunt amet veniam porro deleniti nisi consectetur architecto ratione ipsam earum ipsum eius maiores magnam unde rerum odio! Adipisci maxime, facere perspiciatis quis omnis qui, officiis rem asperiores deserunt autem in, porro fugiat reprehenderit!
+        </div>
+        <!-- End tab2 -->
+
+        <!-- tab3-->
+
+        <input type="radio" name="tab" id="three" class="tabs__input">
+        <label for="three" class="tabs__label"> Maps    </label>
+        <div class="tab_content" id="maps">
+            <h3>Tab Three (maps)</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quod provident tempore. Pariatur hic fugiat veritatis, deserunt nihil saepe excepturi debitis commodi ab porro! Nostrum adipisci animi beatae quos dolorem possimus inventore ab incidunt.
+            magni provident harum vel tempore facere similique accusamus, placeat velit nulla suscipit laudantium maiores sapiente assumenda. incidunt magni provident harum vel tempore facere similique accusamus, placeat velit nulla suscipit laudantium
+            maiores sapiente assumenda. incidunt magni provident harum vel tempore facere similique accusamus, placeat velit nulla suscipit laudantium maiores sapiente assumenda.
+
+        </div>
+        <!-- End tab3 -->
+    </div>
+
+    <script>
+        function showTabContent(input, content) {
+            const tab = document.querySelector(`#${input}`);
+
+            const tabContent = document.querySelector(`#${content}`);
+
+            return tab.addEventListener('click', () => {
+
+                hideOtherTabs(content);
+                tabContent.style.display = "block";
+            })
+        };
+
+        function hideOtherTabs(input) {
+            const otherTabs = [...document.querySelectorAll('.tab_content')];
+            console.log(otherTabs);
+            otherTabs.map((item) => {
+                var otherInput = document.querySelector(`#${item.id}`);
+
+                if (otherInput.id !== input) {
+                    // console.log(otherInput);
+                    return otherInput.style.display = "none";
+                }
+
+            });
+
+        }
+
+        showTabContent("one", "flight");
+        showTabContent("two", "info");
+        showTabContent("three", "maps");
+
+
+        /*
+          Other Code 
+
+        var tabOne = document.querySelector('#one');
+        var flightData = document.querySelector('#flight');
+
+        var tabTwo = document.querySelector('#two');
+        var moreInfo = document.querySelector('#info');
+
+        var tabThree = document.querySelector('#three');
+        var maps = document.querySelector('#maps');
+
+        tabOne.addEventListener('click', () => {
+            moreInfo.style.display = "none";
+            maps.style.display = "none";
+            flightData.style.display = "block";
+        });
+
+
+        tabTwo.addEventListener('click', () => {
+            flightData.style.display = "none";
+            maps.style.display = "none";
+            moreInfo.style.display = "block";
+        });
+
+
+        tabThree.addEventListener('click', () => {
+                flightData.style.display = "none"
+                moreInfo.style.display = "none";
+                maps.style.display = "block";
+            }) 
+            */
+    </script>
+</body>
+
+</html>
