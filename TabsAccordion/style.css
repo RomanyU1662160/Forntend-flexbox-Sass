@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-size: 25px;
+}
+
+.tabs {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1%;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+}
+
+.tabs__input {
+    display: none;
+    font-weight: 900;
+      width: 100%;
+}
+
+
+.tabs__label {
+     order: -1;
+    font-weight: 900;
+    display: inline-block;
+    background-color: gray;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(250, 195, 43);
+    padding: 0.5em;
+    border-right: 1px solid white;
+ 
+    flex: auto;
+   
+}
+.tabs__label:hover{
+    background-color: rgb(109, 86, 86);
+    /* color:white; */
+}
+.tabs__input:checked {
+ background-color: blue;
+}
+
+.tabs__label:clicked {
+    background-color: blue;
+     color:white;
+}
+
+
+.tab_content {
+    padding: 1%;
+    background-color: rgb(230, 230, 230);
+    display: none;
+    width: 100%; 
+}
+
+@media(max-width:781px){
+.tabs__label {
+    flex: 1 1 100%; 
+    order:0; 
+}
+}
+/* .tabs__input[id="one"]: checked~. tabs__content[id="one"]; */
